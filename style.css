@@ -1,0 +1,93 @@
+body{
+    padding-top: 20vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0b1522;
+}
+
+.corazon{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(255, 0, 0);
+    position: relative;
+    transform: rotate(45deg);
+    box-shadow: -20px 20px 150px #f20044;   
+    animation: palpitar 0.5s linear infinite alternate;
+}
+
+
+h1{
+    color: white;
+}
+
+@keyframes palpitar{
+    0%{transform: rotate(45deg) scale(1.10);}
+    80%{transform: rotate(45deg) scale(1.0);}
+    100%{transform: rotate(45deg) scale(0.8);}
+}
+
+.corazon::before{
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: red;
+    right: 50%;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #f20044;
+}
+
+.corazon::after{
+    content: "";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: red;
+    top: -50%;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #f20044;
+}
+
+.carta h1{
+    color: #f20044; 
+    font-family: "Pacifico";
+}
+
+.carta p{
+    font-family: "Exo 2";
+}
+
+.carta{
+    background-color: aliceblue;
+    box-shadow: 20px 20px 20px #f20044;
+    border-radius: 10px;
+    padding: 5vh;
+}
+
+.pregunta{
+    padding-top: 5vh;
+}
+
+.pregunta h1{
+    font-family: cursive;
+}
+
+.pregunta__siono{
+    display: flex;
+    justify-content: space-around;
+}
+
+.pregunta__siono a{
+    text-decoration: none;
+    color: #0b1522;
+    background-color: aliceblue;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-right: 3vh;
+    padding-left: 3vh;
+    border-radius: 20%;
+    font-family: "Exo 2";
+}
